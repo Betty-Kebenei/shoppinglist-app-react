@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import instance from '../AxiosInstance';
 import toastr from 'toastr';
-import _ from 'lodash';
 import { 
     Modal,
     FormGroup, 
     ControlLabel,
     FormControl,
-    HelpBlock,
     Button 
 } from 'react-bootstrap';
 

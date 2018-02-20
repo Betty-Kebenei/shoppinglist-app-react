@@ -7,7 +7,6 @@ import instance from '../AxiosInstance';
 import { Button, Modal } from 'react-bootstrap';
 
 import AddListForm from './AddListForm';
-import UpdateListForm from './UpdateListForm';
 import ViewLists from './ViewLists';
 import PaginateLists from './PaginateLists';
 
@@ -21,12 +20,36 @@ class ListsContainer extends Component{
             count: 0,
             limit: 5,
             term: '',
+            getErrorMessage: '',
             searchErrorMessage: ''
         }
     }
 
     componentDidMount(){
         this.getAllShoppingLists();
+    }
+
+    handleChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value });
+    }
+
+    addShoppingList = (event) => {
+        event.preventDefault();
+        let values = new FormData();
+        values.set("listname", this.state.listname);
+
+        instance.post('/shoppinglists', values).then(
+            response => {
+                this.setState({
+                    listname:'',
+                    showModal3: false
+                });
+                this.getAllShoppingLists();
+                toastr.success("You have successfully created a shopping lists!")
+            }
+        ).catch(error => {
+            toastr.error(error.response.data.message)
+        })
     }
 
     getAllShoppingLists = () => {
@@ -37,7 +60,11 @@ class ListsContainer extends Component{
                     count: response.data.count
                 })
             }).catch(error =>{
-                    toastr.error(error.response.data.message)
+                this.setState({
+                    shoppingLists: '',
+                    count: '',
+                    getErrorMessage: error.response.data.message
+                });
             })
         }
     onPaginateLists = (limit, page) => {
@@ -86,7 +113,6 @@ class ListsContainer extends Component{
     }
     
     render(){
-        console.log(this.state.searchErrorMessage)
         return(
             <div className="ViewContainer">
                 <div className="row">
@@ -102,8 +128,9 @@ class ListsContainer extends Component{
                         </Modal.Header>
                         <Modal.Body>
                             <AddListForm
-                                getAllShoppingLists={this.getAllShoppingLists}
-                                closeModal = {() => this.setState({showModal3:false})}
+                                listName={this.listname}
+                                onChange={this.handleChange}
+                                onSubmit={this.addShoppingList}
                             />
                         </Modal.Body>
                         <Modal.Footer>
@@ -113,7 +140,7 @@ class ListsContainer extends Component{
                     </div>
                     <div className="col-xs-2">
                         <Button 
-                            onClick = {() => this.deleteAllShoppingLists}
+                            onClick = {() => this.deleteAllShoppingLists()}
                             type="button"
                             >Delete Lists
                         </Button>
@@ -131,16 +158,17 @@ class ListsContainer extends Component{
                 <ViewLists 
                     props={this.props}
                     getAllShoppingLists={this.getAllShoppingLists}
-                    allShoppingLists = {this.state.shoppingLists}
-                    updateShoppingList = {this.updateShoppingList}
-                    deleteOneShoppingList = {this.deleteOneShoppingList}
-                    searchErrorMessage = {this.state.searchErrorMessage}
+                    allShoppingLists={this.state.shoppingLists}
+                    updateShoppingList={this.updateShoppingList}
+                    deleteOneShoppingList={this.deleteOneShoppingList}
+                    getErrorMessage={this.state.getErrorMessage}
+                    searchErrorMessage={this.state.searchErrorMessage}
                 />
 
                 <PaginateLists 
-                    count = {this.state.count}
-                    limit = {this.state.limit}
-                    onPaginateLists = {this.onPaginateLists}
+                    count={this.state.count}
+                    limit={this.state.limit}
+                    onPaginateLists={this.onPaginateLists}
                 />
             </div>
         );

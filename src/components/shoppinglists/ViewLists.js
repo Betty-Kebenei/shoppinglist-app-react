@@ -1,26 +1,16 @@
 import '../../index.css';
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 import _ from 'lodash';
-import { 
-    // FormGroup, 
-    // ControlLabel,
-    // FormControl,
-    // HelpBlock,
-    // Button 
-} from 'react-bootstrap';
 import UpdateListForm from './UpdateListForm';
 
 const ViewLists = (props) => {
     const {
         getAllShoppingLists,
         allShoppingLists,
-        updateShoppingList,
         deleteOneShoppingList,
+        getErrorMessage,
         searchErrorMessage,
-        openModal
-
     } = props;
 
     const renderShoppinglists = () =>  (
@@ -77,6 +67,7 @@ const ViewLists = (props) => {
                         {renderShoppinglists()}
                     </tbody>
                 </table>
+                {getErrorMessage}
                 {searchErrorMessage}
             </div>
         </div>

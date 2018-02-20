@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  padding: 5%;
+  /* margin: 5%;  */
+  background-color: #F5F5F5;
+}
+.View{
+  min-height: 400px;
+}
+.ViewContainer{
+  min-height: 600px;
+}
+

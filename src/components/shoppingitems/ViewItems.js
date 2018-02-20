@@ -8,8 +8,8 @@ const ViewItems = (props) => {
         listname,
         allShoppingItems,
         deleteOneShoppingItem,
-        deleteAllShoppingItems,
         getAllShoppingItems,
+        getErrorMessage,
         searchErrorMessage
     } = props;
 
@@ -72,6 +72,7 @@ const ViewItems = (props) => {
                         {renderShoppingitems()}
                     </tbody>
                 </table>
+                {getErrorMessage}
                 {searchErrorMessage}
             </div>
         </div>

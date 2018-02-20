@@ -1,62 +1,32 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import toastr from 'toastr';
+import React from 'react';
 import { 
     FormGroup,
     ControlLabel,
     FormControl,
-    HelpBlock,
     Button 
 } from 'react-bootstrap';
 
-class SignUpForm extends Component {
-    constructor(props, context) {
-      super(props, context);
-  
-      this.state = {
-        username: '',
-        email: '',
-        password: '',
-        repeat_password: ''
-      };
+const SignUpForm = (props) => {
 
-      this.handleChange = this.handleChange.bind(this);
-    }
+    const {
+        onSubmit,
+        handleChange,
+        username,
+        email,
+        password,
+        repeat_password,
+    } = props;
 
-    getValidationState = () => {
-      const length = this.state.password.length;
+    const getValidationState = () => {
+      const length = password.length;
       if (length > 6) return 'success';
       else if (length > 3) return 'warning';
       else if (length > 0) return 'error';
       return null;
     }
-  
-    handleChange = (e) => {
-      this.setState({ [e.target.name]: e.target.value });
-    }
 
-    handleSubmit = (event) => {
-        event.preventDefault();
-        let values = new FormData();
-        values.set("username", this.state.username);
-        values.set("email", this.state.email);
-        values.set("password", this.state.password);
-        values.set("repeat_password", this.state.repeat_password);
-
-        axios.post('/auth/register', values).then(
-            response => {
-                this.props.closeModal();
-                toastr.success("You have successfully registered!")
-            }
-        ).catch(error => {
-            console.log(error.response)
-            toastr.error(error.response.data.message)
-        })
-    }
-  
-    render() {
-      return (
-        <form onSubmit={this.handleSubmit}>
+    return (
+        <form onSubmit={onSubmit}>
             <FormGroup
                 controlId="text"
                 // validationState={this.getValidationState()}
@@ -65,9 +35,10 @@ class SignUpForm extends Component {
                     <FormControl
                         type="text"
                         name="username"
-                        value={this.state.username}
+                        value={username}
                         placeholder="Enter username"
-                        onChange={this.handleChange}
+                        onChange={handleChange}
+                        required
                     />
             </FormGroup>
             <FormGroup
@@ -78,40 +49,41 @@ class SignUpForm extends Component {
                     <FormControl
                         type="email"
                         name="email"
-                        value={this.state.email}
+                        value={email}
                         placeholder="Enter email"
-                        onChange={this.handleChange}
+                        onChange={handleChange}
+                        required
                     />
             </FormGroup>
             <FormGroup
                 controlId="password"
-                validationState={this.getValidationState()}
+                validationState={getValidationState()}
                 >
                 <ControlLabel>Password</ControlLabel>
                     <FormControl
                         type="password"
                         name="password"
-                        value={this.state.password}
-                        onChange={this.handleChange}
+                        value={password}
+                        onChange={handleChange}
+                        required
                     />
             </FormGroup>
             <FormGroup
                 controlId="repeat_password"
-                validationState={this.getValidationState()}
+                validationState={getValidationState()}
                 >
                 <ControlLabel>Confirm Password</ControlLabel>
                     <FormControl
                         type="password"
                         name="repeat_password"
-                        value={this.state.repeat_password}
-                        onChange={this.handleChange}
+                        value={repeat_password}
+                        onChange={handleChange}
+                        required
                     />
             </FormGroup>
             <Button type="submit">Submit</Button>
             <FormControl.Feedback />
-      </form>
-      );
-    }
-  }
-  
+        </form>
+    );
+} 
 export default SignUpForm;

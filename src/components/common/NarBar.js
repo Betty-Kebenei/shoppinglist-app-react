@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Button  } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 
 export default class NavBar extends Component {
 
@@ -14,9 +14,7 @@ export default class NavBar extends Component {
         else{
             return(
                 <div>
-                    <Link 
-                        bsStyle="primary" 
-                        bsSize="large" 
+                    <Link  
                         onClick={() => localStorage.clear()}
                         to='/'
                         >
@@ -27,7 +25,6 @@ export default class NavBar extends Component {
         }
     }
     render(){
-        console.log('ddddddd', this.props)
         return(
             <div>
                   <Navbar inverse collapseOnSelect>

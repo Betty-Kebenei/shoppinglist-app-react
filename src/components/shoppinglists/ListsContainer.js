@@ -57,7 +57,8 @@ class ListsContainer extends Component{
             response => {
                 this.setState({
                     shoppingLists: _.mapKeys(response.data.shoppinglists, 'list_id'),
-                    count: response.data.count
+                    count: response.data.count,
+                    getErrorMessage: ''
                 })
             }).catch(error =>{
                 this.setState({
@@ -65,6 +66,10 @@ class ListsContainer extends Component{
                     count: '',
                     getErrorMessage: error.response.data.message
                 });
+                if(this.state.getErrorMessage === 'Sorry your token expired, please log in again!'){
+                    localStorage.clear();
+                    this.props.history.push('/');
+                }
             })
         }
     onPaginateLists = (limit, page) => {

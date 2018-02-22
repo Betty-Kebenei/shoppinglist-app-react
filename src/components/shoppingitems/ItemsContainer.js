@@ -74,7 +74,8 @@ class ItemsContainer extends Component{
             response => {
                 this.setState({
                     allShoppingItems: _.mapKeys(response.data.shoppingitems, 'item_id'),
-                    count: response.data.count
+                    count: response.data.count,
+                    getErrorMessage: ''
                 })
             }).catch(error =>{
                 this.setState({

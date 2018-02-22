@@ -11,6 +11,8 @@ import WelcomePage from './components/authentication/WelcomePage';
 import ListsContainer from './components/shoppinglists/ListsContainer';
 import ItemsContainer from './components/shoppingitems/ItemsContainer';
 
+import '../node_modules/toastr/build/toastr.css';
+
 axios.defaults.baseURL = 'https://flaskapiv1.herokuapp.com';
 
 const App = () => {

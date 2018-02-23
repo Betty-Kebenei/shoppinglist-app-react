@@ -13,7 +13,6 @@ This is a pure ReactJs (no use of redux) client to consume the FlaskAPI for the 
 ## Prerequisites:
 * Node.js
 * React.js 
-* Redux 
 
 ## Getting Started
 These are instructions on how to set up the application on a local development machine.

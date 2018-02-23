@@ -1,4 +1,6 @@
 import '../../index.css';
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 import React, { Component } from 'react';
 import _ from 'lodash';
@@ -114,22 +116,40 @@ class ItemsContainer extends Component{
             })
         }
     deleteOneShoppingItem = (id, itemId) => {
-        instance.delete(`/shoppinglists/${id}/shoppingitems/${itemId}`).then(
-            response => {
-                this.getAllShoppingItems(id);
-                toastr.success('Shopping item successfully deleted!')
-            }).catch(error =>{
-                    toastr.error(error.response.data.message)
-            })
+        confirmAlert({
+            title: 'Confirm to DELETE',                       
+            message: 'Are you sure you want to DELETE?',                 
+            confirmLabel: 'Yes',                           
+            cancelLabel: 'No',                             
+            onConfirm: () => {
+                instance.delete(`/shoppinglists/${id}/shoppingitems/${itemId}`).then(
+                    response => {
+                        this.getAllShoppingItems(id);
+                        toastr.success('Shopping item successfully deleted!')
+                    }).catch(error =>{
+                            toastr.error(error.response.data.message)
+                    })
+            },    
+            onCancel: () => '',      
+        }); 
     }
     deleteAllShoppingItems = (id) => {
-        instance.delete(`/shoppinglists/${id}/shoppingitems`).then(
-            response => {
-                this.getAllShoppingItems(id);
-                toastr.success('All shopping lists successfully deleted!')
-            }).catch(error =>{
-                    toastr.error(error.response.data.message)
-            })
+        confirmAlert({
+            title: 'Confirm to DELETE',                       
+            message: 'Are you sure you want to DELETE?',                 
+            confirmLabel: 'Yes',                           
+            cancelLabel: 'No',                             
+            onConfirm: () => {
+                instance.delete(`/shoppinglists/${id}/shoppingitems`).then(
+                    response => {
+                        this.getAllShoppingItems(id);
+                        toastr.success('All shopping lists successfully deleted!')
+                    }).catch(error =>{
+                            toastr.error(error.response.data.message)
+                    })
+            },    
+            onCancel: () => '',      
+        });
     }
     
     render(){

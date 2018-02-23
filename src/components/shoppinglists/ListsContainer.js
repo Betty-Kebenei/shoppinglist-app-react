@@ -1,3 +1,7 @@
+import '../../index.css';
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css';
+
 import React, { Component } from 'react';
 import _ from 'lodash';
 import toastr from 'toastr';
@@ -99,22 +103,41 @@ class ListsContainer extends Component{
             })
     }
     deleteOneShoppingList = (id) => {
-        instance.delete(`/shoppinglists/${id}`).then(
-            response => {
-                this.getAllShoppingLists();
-                toastr.success('Shopping list successfully deleted!')
-            }).catch(error =>{
-                    toastr.error(error.response.data.message)
-            })
+        confirmAlert({
+            title: 'Confirm to DELETE',                       
+            message: 'Are you sure you want to DELETE?',                 
+            confirmLabel: 'Yes',                           
+            cancelLabel: 'No',                             
+            onConfirm: () => {
+                instance.delete(`/shoppinglists/${id}`).then(
+                    response => {
+                        this.getAllShoppingLists();
+                        toastr.success('Shopping list successfully deleted!')
+                    }).catch(error =>{
+                            toastr.error(error.response.data.message)
+                    })
+            },    
+            onCancel: () => '',      
+        });
+        
     }
     deleteAllShoppingLists = () => {
-        instance.delete(`/shoppinglists`).then(
-            response => {
-                this.getAllShoppingLists();
-                toastr.success('All shopping lists successfully deleted!')
-            }).catch(error =>{
-                    toastr.error(error.response.data.message)
-            })
+        confirmAlert({
+            title: 'Confirm to DELETE',                       
+            message: 'Are you sure you want to DELETE?',                 
+            confirmLabel: 'Yes',                           
+            cancelLabel: 'No',                             
+            onConfirm: () => {
+                instance.delete(`/shoppinglists`).then(
+                    response => {
+                        this.getAllShoppingLists();
+                        toastr.success('All shopping lists successfully deleted!')
+                    }).catch(error =>{
+                            toastr.error(error.response.data.message)
+                    })
+            },    
+            onCancel: () => '', 
+        });
     }
     
     render(){

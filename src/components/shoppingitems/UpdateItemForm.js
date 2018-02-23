@@ -13,31 +13,21 @@ class UpdateItemForm extends Component {
     constructor(props) {
       super(props);
   
-      this.handleChange = this.handleChange.bind(this);
-  
       this.state = {
         itemname: props.itemName,
         quantity: props.quantity,
         units: props.units,
         price: props.price,
         currency: props.currency,
-        show: true
       };
     }
 
-    handleClose() {
-        this.setState({ show: false });
-    }
-    
-    handleShow() {
-    const openModal = this.setState({ show: true });
-    this.props.callbackFromParent(openModal);
-    }
-
+    // Handle form input changes.
     handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     }
 
+    // Put a shopping item.
     handleSubmit = (event) => {
         event.preventDefault();
         let values = new FormData();

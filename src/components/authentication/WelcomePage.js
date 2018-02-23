@@ -20,12 +20,12 @@ class WelcomePage extends Component {
         show: false
       };
     }
-   
-
+    // Handle form input changes.
     handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     }
 
+    // Handle user registration data.
     handleSubmitRegistrationData = (event) => {
         event.preventDefault();
         let values = new FormData();
@@ -44,6 +44,7 @@ class WelcomePage extends Component {
         })
     }
 
+    // Handle user login data.
     handleSubmitLoginData = (event) => {
         event.preventDefault();
         let values = new FormData();

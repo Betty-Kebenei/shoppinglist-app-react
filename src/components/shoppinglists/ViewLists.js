@@ -13,6 +13,7 @@ const ViewLists = (props) => {
         searchErrorMessage,
     } = props;
 
+    // Display shopping lists in a table.
     const renderShoppinglists = () =>  (
         _.map(allShoppingLists, shoppinglist => {
             const list_id = shoppinglist.list_id;

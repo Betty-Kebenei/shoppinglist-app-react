@@ -33,15 +33,18 @@ class ItemsContainer extends Component{
         }
     }
 
+    // Display shopping items when this component is mounted.
     componentDidMount(){
         const id = this.props.match.params.id;
         this.getAllShoppingItems(id);
     }
 
+    // Handle form input changes.
     handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     }
 
+    // Post shopping items.
     addShoppingItem = (event) => {
         event.preventDefault();
         let values = new FormData();
@@ -70,7 +73,7 @@ class ItemsContainer extends Component{
         })
     }
 
-
+    // Get shopping items.
     getAllShoppingItems = (id) => {
         instance.get(`/shoppinglists/${id}/shoppingitems`).then(
             response => {
@@ -88,6 +91,7 @@ class ItemsContainer extends Component{
             })
         }
 
+    // Paginate shopping items.
     onPaginateItems = (id, limit, page) => {
         instance.get(`/shoppinglists/${id}/shoppingitems?limit=${limit}&page=${page}`).then(
             response => {
@@ -95,11 +99,10 @@ class ItemsContainer extends Component{
                     allShoppingItems: _.mapKeys(response.data.shoppingitems, 'item_id'),
                     count: response.data.count
                 })
-            }).catch(error =>{
-                    toastr.error(error.response.data.message)
-            })
+            }).catch(error =>{})
         } 
 
+    // Search shopping items.
     onSearchShoppingItem = (id, term) => {
         instance.get(`/shoppinglists/${id}/shoppingitems?q=${term}`).then(
             response => {
@@ -115,6 +118,8 @@ class ItemsContainer extends Component{
                 })
             })
         }
+
+    // Delete one shopping item.
     deleteOneShoppingItem = (id, itemId) => {
         confirmAlert({
             title: 'Confirm to DELETE',                       
@@ -126,13 +131,13 @@ class ItemsContainer extends Component{
                     response => {
                         this.getAllShoppingItems(id);
                         toastr.success('Shopping item successfully deleted!')
-                    }).catch(error =>{
-                            toastr.error(error.response.data.message)
-                    })
+                    }).catch(error =>{})
             },    
             onCancel: () => '',      
         }); 
     }
+
+    // Delete all shopping items.
     deleteAllShoppingItems = (id) => {
         confirmAlert({
             title: 'Confirm to DELETE',                       
@@ -144,9 +149,7 @@ class ItemsContainer extends Component{
                     response => {
                         this.getAllShoppingItems(id);
                         toastr.success('All shopping lists successfully deleted!')
-                    }).catch(error =>{
-                            toastr.error(error.response.data.message)
-                    })
+                    }).catch(error =>{})
             },    
             onCancel: () => '',      
         });

@@ -1,6 +1,6 @@
 
-## Shoppinglist-reactjs-client
-This is a ReactJs client to consume the FlaskAPI for the shopping list application: 
+## Shoppinglist-app-react
+This is a pure ReactJs (no use of redux) client to consume the FlaskAPI for the shopping list application: 
 
 * Hosted API: https://flaskapiv1.herokuapp.com/
 * Swagger documentation: https://app.swaggerhub.com/apis/Andela42/FlaskAPI/1.0.0#/

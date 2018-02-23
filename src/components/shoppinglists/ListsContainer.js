@@ -29,14 +29,17 @@ class ListsContainer extends Component{
         }
     }
 
+    // Display shopping lists when this component is mounted.
     componentDidMount(){
         this.getAllShoppingLists();
     }
 
+    // Handle form input changes.
     handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     }
 
+    // Post shopping lists.
     addShoppingList = (event) => {
         event.preventDefault();
         let values = new FormData();
@@ -56,6 +59,7 @@ class ListsContainer extends Component{
         })
     }
 
+    // Get shopping lists.
     getAllShoppingLists = () => {
         instance.get('/shoppinglists').then(
             response => {
@@ -77,6 +81,8 @@ class ListsContainer extends Component{
                 }
             })
         }
+
+    // Paginate shopping lists.
     onPaginateLists = (limit, page) => {
         instance.get(`/shoppinglists?limit=${limit}&page=${page}`).then(
             response => {
@@ -84,10 +90,10 @@ class ListsContainer extends Component{
                     shoppingLists: _.mapKeys(response.data.shoppinglists, 'list_id'),
                     count: response.data.count
                 })
-            }).catch(error =>{
-                    toastr.error(error.response.data.message)
-            })
+            }).catch(error =>{})
     }
+
+    // Search shopping lists.
     onSearchShoppingList = (term) => {
         instance.get(`/shoppinglists?q=${term}`).then(
             response => {
@@ -103,6 +109,8 @@ class ListsContainer extends Component{
                 })
             })
     }
+
+    // Delete one shopping list.
     deleteOneShoppingList = (id) => {
         confirmAlert({
             title: 'Confirm to DELETE',                       
@@ -114,14 +122,14 @@ class ListsContainer extends Component{
                     response => {
                         this.getAllShoppingLists();
                         toastr.success('Shopping list successfully deleted!')
-                    }).catch(error =>{
-                            toastr.error(error.response.data.message)
-                    })
+                    }).catch(error =>{})
             },    
             onCancel: () => '',      
         });
         
     }
+
+    // Delete all shopping lists.
     deleteAllShoppingLists = () => {
         confirmAlert({
             title: 'Confirm to DELETE',                       
@@ -133,9 +141,7 @@ class ListsContainer extends Component{
                     response => {
                         this.getAllShoppingLists();
                         toastr.success('All shopping lists successfully deleted!')
-                    }).catch(error =>{
-                            toastr.error(error.response.data.message)
-                    })
+                    }).catch(error =>{})
             },    
             onCancel: () => '', 
         });

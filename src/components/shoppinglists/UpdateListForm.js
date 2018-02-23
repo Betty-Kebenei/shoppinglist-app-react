@@ -20,10 +20,12 @@ class UpdateListForm extends Component {
       };
     }
 
+    // Handle form input changes.
     handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     }
 
+    // Put a shopping list.
     handleSubmit = (event) => {
         event.preventDefault();
         let values = new FormData();

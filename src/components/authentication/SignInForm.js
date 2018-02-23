@@ -14,7 +14,8 @@ const SignInForm = (props) =>  {
         onSubmit,
         onChange
     } = props;
-  
+    
+    // Return a login react-bootstrap form.
     return (
         <form onSubmit={onSubmit}>
             <FormGroup

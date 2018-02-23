@@ -14,6 +14,7 @@ const AddListForm = (props) => {
         onSubmit
     } = props;
 
+    // Return an add list react-bootstrap form.
     return (
         <div>
             <form onSubmit={onSubmit}>

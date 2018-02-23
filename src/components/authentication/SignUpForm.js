@@ -25,6 +25,7 @@ const SignUpForm = (props) => {
       return null;
     }
 
+    // Return a registration react-bootstrap form.
     return (
         <form onSubmit={onSubmit}>
             <FormGroup

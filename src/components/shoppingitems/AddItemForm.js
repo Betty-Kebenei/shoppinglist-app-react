@@ -18,6 +18,7 @@ const AddItemForm = (props) => {
         onSubmit
     } = props;
 
+    // Return an add item react-bootstrap form.
     return (
         <div>
             <form onSubmit={onSubmit}>

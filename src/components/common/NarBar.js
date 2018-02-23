@@ -4,6 +4,8 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 export default class NavBar extends Component {
 
+    // Change what is displayed in the navbar; 
+    // Logout link should only be displayed if a user is logged in.
     logout = () => {
         const access_token = localStorage.getItem('access_token');
         if(!access_token){
@@ -24,6 +26,7 @@ export default class NavBar extends Component {
             );
         }
     }
+    
     render(){
         return(
             <div>

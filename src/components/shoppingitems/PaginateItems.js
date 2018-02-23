@@ -9,8 +9,6 @@ const PaginateItems = (props) => {
         onPaginateItems
     } = props;
 
-    
-
     // Formulating numbers for pages of shopping items.
     let itemPages = [];
     let numOfPages = Math.floor(countItems/limitItems);

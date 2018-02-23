@@ -29,7 +29,6 @@ const SignUpForm = (props) => {
         <form onSubmit={onSubmit}>
             <FormGroup
                 controlId="text"
-                // validationState={this.getValidationState()}
                 >
                 <ControlLabel>Username</ControlLabel>
                     <FormControl
@@ -43,7 +42,6 @@ const SignUpForm = (props) => {
             </FormGroup>
             <FormGroup
                 controlId="email"
-                // validationState={this.getValidationState()}
                 >
                 <ControlLabel>Email</ControlLabel>
                     <FormControl

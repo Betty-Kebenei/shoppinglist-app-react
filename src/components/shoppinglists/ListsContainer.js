@@ -73,6 +73,7 @@ class ListsContainer extends Component{
                 if(this.state.getErrorMessage === 'Sorry your token expired, please log in again!'){
                     localStorage.clear();
                     this.props.history.push('/');
+                    window.location.reload();
                 }
             })
         }

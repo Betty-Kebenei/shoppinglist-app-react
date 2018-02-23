@@ -37,6 +37,7 @@ class UpdateListForm extends Component {
                     showModal4: false 
                 })
                 this.props.getAllShoppingLists();
+                toastr.success("You have successfully updated a shopping lists!")
             }).catch(error =>{
                     toastr.error(error.response.data.message)
             })

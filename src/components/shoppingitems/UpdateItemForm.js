@@ -55,7 +55,7 @@ class UpdateItemForm extends Component {
                     showModal6: false 
                 })
                 this.props.getAllShoppingItems(listId);
-                toastr.success("You have successfully created a shopping item!");
+                toastr.success("You have successfully updated a shopping item!");
             }
         ).catch(error => {
             toastr.error(error.response.data.message)

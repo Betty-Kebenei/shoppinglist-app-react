@@ -1,3 +1,7 @@
+import '../../index.css';
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css';
+
 import React, { Component } from 'react';
 import _ from 'lodash';
 import toastr from 'toastr';
@@ -7,7 +11,6 @@ import instance from '../AxiosInstance';
 import { Button, Modal } from 'react-bootstrap';
 
 import AddListForm from './AddListForm';
-import UpdateListForm from './UpdateListForm';
 import ViewLists from './ViewLists';
 import PaginateLists from './PaginateLists';
 
@@ -21,6 +24,7 @@ class ListsContainer extends Component{
             count: 0,
             limit: 5,
             term: '',
+            getErrorMessage: '',
             searchErrorMessage: ''
         }
     }
@@ -29,15 +33,48 @@ class ListsContainer extends Component{
         this.getAllShoppingLists();
     }
 
+    handleChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value });
+    }
+
+    addShoppingList = (event) => {
+        event.preventDefault();
+        let values = new FormData();
+        values.set("listname", this.state.listname);
+
+        instance.post('/shoppinglists', values).then(
+            response => {
+                this.setState({
+                    listname:'',
+                    showModal3: false
+                });
+                this.getAllShoppingLists();
+                toastr.success("You have successfully created a shopping lists!")
+            }
+        ).catch(error => {
+            toastr.error(error.response.data.message)
+        })
+    }
+
     getAllShoppingLists = () => {
         instance.get('/shoppinglists').then(
             response => {
                 this.setState({
                     shoppingLists: _.mapKeys(response.data.shoppinglists, 'list_id'),
-                    count: response.data.count
+                    count: response.data.count,
+                    getErrorMessage: ''
                 })
             }).catch(error =>{
-                    toastr.error(error.response.data.message)
+                this.setState({
+                    shoppingLists: '',
+                    count: '',
+                    getErrorMessage: error.response.data.message
+                });
+                if(this.state.getErrorMessage === 'Sorry your token expired, please log in again!'){
+                    localStorage.clear();
+                    this.props.history.push('/');
+                    window.location.reload();
+                }
             })
         }
     onPaginateLists = (limit, page) => {
@@ -67,26 +104,44 @@ class ListsContainer extends Component{
             })
     }
     deleteOneShoppingList = (id) => {
-        instance.delete(`/shoppinglists/${id}`).then(
-            response => {
-                this.getAllShoppingLists();
-                toastr.success('Shopping list successfully deleted!')
-            }).catch(error =>{
-                    toastr.error(error.response.data.message)
-            })
+        confirmAlert({
+            title: 'Confirm to DELETE',                       
+            message: 'Are you sure you want to DELETE?',                 
+            confirmLabel: 'Yes',                           
+            cancelLabel: 'No',                             
+            onConfirm: () => {
+                instance.delete(`/shoppinglists/${id}`).then(
+                    response => {
+                        this.getAllShoppingLists();
+                        toastr.success('Shopping list successfully deleted!')
+                    }).catch(error =>{
+                            toastr.error(error.response.data.message)
+                    })
+            },    
+            onCancel: () => '',      
+        });
+        
     }
     deleteAllShoppingLists = () => {
-        instance.delete(`/shoppinglists`).then(
-            response => {
-                this.getAllShoppingLists();
-                toastr.success('All shopping lists successfully deleted!')
-            }).catch(error =>{
-                    toastr.error(error.response.data.message)
-            })
+        confirmAlert({
+            title: 'Confirm to DELETE',                       
+            message: 'Are you sure you want to DELETE?',                 
+            confirmLabel: 'Yes',                           
+            cancelLabel: 'No',                             
+            onConfirm: () => {
+                instance.delete(`/shoppinglists`).then(
+                    response => {
+                        this.getAllShoppingLists();
+                        toastr.success('All shopping lists successfully deleted!')
+                    }).catch(error =>{
+                            toastr.error(error.response.data.message)
+                    })
+            },    
+            onCancel: () => '', 
+        });
     }
     
     render(){
-        console.log(this.state.searchErrorMessage)
         return(
             <div className="ViewContainer">
                 <div className="row">
@@ -102,8 +157,9 @@ class ListsContainer extends Component{
                         </Modal.Header>
                         <Modal.Body>
                             <AddListForm
-                                getAllShoppingLists={this.getAllShoppingLists}
-                                closeModal = {() => this.setState({showModal3:false})}
+                                listName={this.listname}
+                                onChange={this.handleChange}
+                                onSubmit={this.addShoppingList}
                             />
                         </Modal.Body>
                         <Modal.Footer>
@@ -113,7 +169,7 @@ class ListsContainer extends Component{
                     </div>
                     <div className="col-xs-2">
                         <Button 
-                            onClick = {() => this.deleteAllShoppingLists}
+                            onClick = {() => this.deleteAllShoppingLists()}
                             type="button"
                             >Delete Lists
                         </Button>
@@ -131,16 +187,17 @@ class ListsContainer extends Component{
                 <ViewLists 
                     props={this.props}
                     getAllShoppingLists={this.getAllShoppingLists}
-                    allShoppingLists = {this.state.shoppingLists}
-                    updateShoppingList = {this.updateShoppingList}
-                    deleteOneShoppingList = {this.deleteOneShoppingList}
-                    searchErrorMessage = {this.state.searchErrorMessage}
+                    allShoppingLists={this.state.shoppingLists}
+                    updateShoppingList={this.updateShoppingList}
+                    deleteOneShoppingList={this.deleteOneShoppingList}
+                    getErrorMessage={this.state.getErrorMessage}
+                    searchErrorMessage={this.state.searchErrorMessage}
                 />
 
                 <PaginateLists 
-                    count = {this.state.count}
-                    limit = {this.state.limit}
-                    onPaginateLists = {this.onPaginateLists}
+                    count={this.state.count}
+                    limit={this.state.limit}
+                    onPaginateLists={this.onPaginateLists}
                 />
             </div>
         );

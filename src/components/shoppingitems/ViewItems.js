@@ -8,8 +8,8 @@ const ViewItems = (props) => {
         listname,
         allShoppingItems,
         deleteOneShoppingItem,
-        deleteAllShoppingItems,
         getAllShoppingItems,
+        getErrorMessage,
         searchErrorMessage
     } = props;
 
@@ -25,29 +25,36 @@ const ViewItems = (props) => {
                     <td>{item.price}</td>
                     <td>{item.currency}</td>
                     <td>
-
-                    <UpdateItemForm
-                        props={props}
-                        listId={id}
-                        listName={listname}
-                        itemId={item.item_id}
-                        itemName={item.itemname}
-                        quantity={item.quantity}
-                        units={item.units}
-                        price={item.price}
-                        currency={item.currency}
-                        getAllShoppingItems={getAllShoppingItems}
-                    />
-
-                    <button 
-                        type="button" 
-                        className="btn glyphicon glyphicon-trash text-primary" 
-                        onClick={()=>deleteOneShoppingItem(id, item.item_id)}
-                        data-toggle="tooltip" 
-                        data-placement="top" 
-                        title="Delete_item" 
-                        />  
-
+                    <div className="row">
+                        <div className="col-xs-2">       
+                        </div>
+                        <div className="col-xs-2">       
+                        </div>
+                        <div className="col-xs-2"> 
+                            <UpdateItemForm
+                                props={props}
+                                listId={id}
+                                listName={listname}
+                                itemId={item.item_id}
+                                itemName={item.itemname}
+                                quantity={item.quantity}
+                                units={item.units}
+                                price={item.price}
+                                currency={item.currency}
+                                getAllShoppingItems={getAllShoppingItems}
+                            />
+                        </div>
+                        <div className="col-xs-2"> 
+                        <button 
+                            type="button" 
+                            className="btn glyphicon glyphicon-trash text-primary" 
+                            onClick={()=>deleteOneShoppingItem(id, item.item_id)}
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Delete_item" 
+                        />       
+                        </div>
+                    </div>
                     </td>
                 </tr>
             );
@@ -72,6 +79,7 @@ const ViewItems = (props) => {
                         {renderShoppingitems()}
                     </tbody>
                 </table>
+                {getErrorMessage}
                 {searchErrorMessage}
             </div>
         </div>

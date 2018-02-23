@@ -1,30 +1,64 @@
-import '../../App.css';
+import '../../index.css';
 
 import React, { Component } from 'react';
+import axios from 'axios';
+import toastr from 'toastr';
 import { Button, Modal } from 'react-bootstrap';
 
 import SignInForm from './SignInForm';
 import SignUpForm from './SignUpForm';
 
 class WelcomePage extends Component {
-    constructor(props, context) {
-      super(props, context);
-  
-      this.handleShow = this.handleShow.bind(this);
-      this.handleClose = this.handleClose.bind(this);
+    constructor(props) {
+      super(props);
   
       this.state = {
+        username: '',
+        email: '',
+        password: '',
+        repeat_password: '',
         show: false
       };
-      console.log(props)
     }
-  
-    handleClose() {
-      this.setState({ show: false });
+   
+
+    handleChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value });
     }
-  
-    handleShow() {
-      this.setState({ show: true });
+
+    handleSubmitRegistrationData = (event) => {
+        event.preventDefault();
+        let values = new FormData();
+        values.set("username", this.state.username);
+        values.set("email", this.state.email);
+        values.set("password", this.state.password);
+        values.set("repeat_password", this.state.repeat_password);
+
+        axios.post('/auth/register', values).then(
+            response => {
+                this.setState({showModal2:false})
+                toastr.success("You have successfully registered!")
+            }
+        ).catch(error => {
+            toastr.error(error.response.data.message)
+        })
+    }
+
+    handleSubmitLoginData = (event) => {
+        event.preventDefault();
+        let values = new FormData();
+        values.set("email", this.state.email);
+        values.set("password", this.state.password);
+
+        axios.post('/auth/login', values).then(
+            response => {
+                localStorage.setItem('access_token', response.data.access_token);
+                this.props.history.push('/shoppinglists')
+                toastr.success("You have successfully logged in!")
+            }
+        ).catch(error => {
+            toastr.error(error.response.data.message)
+        })
     }
   
     render() {
@@ -38,8 +72,6 @@ class WelcomePage extends Component {
                 <p>Create, read, update and delete shopping items in shopping lists.</p>
             </div>
             <Button 
-                bsStyle="primary" 
-                bsSize="large" 
                 onClick={() => this.setState({showModal1:true, showModal2:false})}
                 >
                 Sign In
@@ -50,16 +82,20 @@ class WelcomePage extends Component {
                 <Modal.Title>Sign In</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <SignInForm props={this.props}/>
+                    <SignInForm 
+                        props={this.props}
+                        email={this.state.email}
+                        password={this.state.password}
+                        onChange={this.handleChange}
+                        onSubmit={this.handleSubmitLoginData}
+                    />
                 </Modal.Body>
                 <Modal.Footer>
                 <Button onClick={() => this.setState({ showModal1:false})}>Close</Button>
                 </Modal.Footer>
             </Modal>
 
-            <Button 
-                bsStyle="primary" 
-                bsSize="large" 
+            <Button  
                 onClick={() => this.setState({showModal1:false, showModal2:true})}
                 >
                 Sign Up
@@ -71,11 +107,17 @@ class WelcomePage extends Component {
                 </Modal.Header>
                 <Modal.Body>
                     <SignUpForm 
-                        closeModal = {() => this.setState({showModal2:false})}
+                        username={this.state.username}
+                        email={this.state.email}
+                        password={this.state.password}
+                        repeat_password={this.state.repeat_password}
+                        handleChange={this.handleChange}
+                        onSubmit={this.handleSubmitRegistrationData}
+                        closeModal ={() => this.setState({showModal2:false})}
                     />
                 </Modal.Body>
                 <Modal.Footer>
-                <Button onClick={() => this.setState({ showModal2:false})}>Close</Button>
+                <Button onClick={() => this.setState({showModal2:false})}>Close</Button>
                 </Modal.Footer>
             </Modal>
         </div>

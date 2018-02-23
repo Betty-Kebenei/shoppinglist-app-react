@@ -1,4 +1,6 @@
 import '../../index.css';
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 import React, { Component } from 'react';
 import _ from 'lodash';
@@ -18,9 +20,15 @@ class ItemsContainer extends Component{
 
         this.state = {
             listname:'',
+            itemname: '',
+            quantity:'',
+            units:'',
+            price:'',
+            currency:'',
             allShoppingItems: [],
             count: 0,
             limit: 5,
+            getErrorMessage: '',
             searchErrorMessage: ''
         }
     }
@@ -30,15 +38,53 @@ class ItemsContainer extends Component{
         this.getAllShoppingItems(id);
     }
 
+    handleChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value });
+    }
+
+    addShoppingItem = (event) => {
+        event.preventDefault();
+        let values = new FormData();
+        values.set("itemname", this.state.itemname);
+        values.set("quantity", this.state.quantity);
+        values.set("units", this.state.units);
+        values.set("price", this.state.price);
+        values.set("currency", this.state.currency);
+
+        const { id } = this.props.match.params;
+        instance.post(`/shoppinglists/${id}/shoppingitems`, values).then(
+            response => {
+                this.setState({
+                    itemname: '',
+                    quantity:'',
+                    units:'',
+                    price:'',
+                    currency:'',
+                    showModal5: false
+                });
+                this.getAllShoppingItems(id);
+                toastr.success("You have successfully created a shopping item!");
+            }
+        ).catch(error => {
+            toastr.error(error.response.data.message)
+        })
+    }
+
+
     getAllShoppingItems = (id) => {
         instance.get(`/shoppinglists/${id}/shoppingitems`).then(
             response => {
                 this.setState({
                     allShoppingItems: _.mapKeys(response.data.shoppingitems, 'item_id'),
-                    count: response.data.count
+                    count: response.data.count,
+                    getErrorMessage: ''
                 })
             }).catch(error =>{
-                    toastr.error(error.response.data.message)
+                this.setState({
+                    allShoppingItems: '',
+                    count: '',
+                    getErrorMessage: error.response.data.message
+                })
             })
         }
 
@@ -70,22 +116,40 @@ class ItemsContainer extends Component{
             })
         }
     deleteOneShoppingItem = (id, itemId) => {
-        instance.delete(`/shoppinglists/${id}/shoppingitems/${itemId}`).then(
-            response => {
-                this.getAllShoppingItems(id);
-                toastr.success('Shopping item successfully deleted!')
-            }).catch(error =>{
-                    toastr.error(error.response.data.message)
-            })
+        confirmAlert({
+            title: 'Confirm to DELETE',                       
+            message: 'Are you sure you want to DELETE?',                 
+            confirmLabel: 'Yes',                           
+            cancelLabel: 'No',                             
+            onConfirm: () => {
+                instance.delete(`/shoppinglists/${id}/shoppingitems/${itemId}`).then(
+                    response => {
+                        this.getAllShoppingItems(id);
+                        toastr.success('Shopping item successfully deleted!')
+                    }).catch(error =>{
+                            toastr.error(error.response.data.message)
+                    })
+            },    
+            onCancel: () => '',      
+        }); 
     }
     deleteAllShoppingItems = (id) => {
-        instance.delete(`/shoppinglists/${id}/shoppingitems`).then(
-            response => {
-                this.getAllShoppingItems(id);
-                toastr.success('All shopping lists successfully deleted!')
-            }).catch(error =>{
-                    toastr.error(error.response.data.message)
-            })
+        confirmAlert({
+            title: 'Confirm to DELETE',                       
+            message: 'Are you sure you want to DELETE?',                 
+            confirmLabel: 'Yes',                           
+            cancelLabel: 'No',                             
+            onConfirm: () => {
+                instance.delete(`/shoppinglists/${id}/shoppingitems`).then(
+                    response => {
+                        this.getAllShoppingItems(id);
+                        toastr.success('All shopping lists successfully deleted!')
+                    }).catch(error =>{
+                            toastr.error(error.response.data.message)
+                    })
+            },    
+            onCancel: () => '',      
+        });
     }
     
     render(){
@@ -101,10 +165,30 @@ class ItemsContainer extends Component{
                         </Button>
                     </div>
                     <div className="col-xs-2">
-                        <AddItemForm 
-                            id={id}
-                            getAllShoppingItems={this.getAllShoppingItems}
-                        />
+                    <Button 
+                        onClick={() => this.setState({showModal5:true})}
+                        >
+                        Add Item
+                    </Button>
+                    <Modal show={this.state.showModal5} onHide={() => this.setState({ showModal5:false})}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Shopping Item Form</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <AddItemForm 
+                                itemname={this.state.itemname}
+                                quantity={this.state.quantity}
+                                units={this.state.units}
+                                price={this.state.price}
+                                currency={this.state.currency}
+                                onChange={this.handleChange}
+                                onSubmit={this.addShoppingItem}
+                            />
+                        </Modal.Body>
+                        <Modal.Footer>
+                        <Button onClick={() => this.setState({ showModal5:false})}>Close</Button>
+                        </Modal.Footer>
+                    </Modal>
                     </div>
                     <div className="col-xs-2">
                         <Button  
@@ -130,6 +214,7 @@ class ItemsContainer extends Component{
                     allShoppingItems={this.state.allShoppingItems}
                     deleteOneShoppingItem={this.deleteOneShoppingItem}
                     deleteAllShoppingItems={this.deleteAllShoppingItems}
+                    getErrorMessage={this.state.getErrorMessage}
                     searchErrorMessage={this.state.searchErrorMessage}
                 />
                 <PaginateItems

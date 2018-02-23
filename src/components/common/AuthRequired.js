@@ -12,8 +12,8 @@ export default (ComposedComponent) => {
       }
     }
 
-    componentWillUpdate(nextProps) {
-      if (!nextProps.localStorage.getItem('access_token')) {
+    componentWillUpdate() {
+      if (!localStorage.getItem('access_token')) {
         this.props.history.push('/');
       }
     }

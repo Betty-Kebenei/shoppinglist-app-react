@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import instance from '../AxiosInstance';
 import toastr from 'toastr';
-import _ from 'lodash';
 import { 
     Modal,
     FormGroup, 
     ControlLabel,
     FormControl,
-    HelpBlock,
     Button 
 } from 'react-bootstrap';
 
@@ -39,6 +37,7 @@ class UpdateListForm extends Component {
                     showModal4: false 
                 })
                 this.props.getAllShoppingLists();
+                toastr.success("You have successfully updated a shopping lists!")
             }).catch(error =>{
                     toastr.error(error.response.data.message)
             })

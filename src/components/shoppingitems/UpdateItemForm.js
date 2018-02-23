@@ -6,7 +6,6 @@ import {
     FormGroup, 
     ControlLabel,
     FormControl,
-    HelpBlock,
     Button 
 } from 'react-bootstrap';
 
@@ -48,7 +47,7 @@ class UpdateItemForm extends Component {
         values.set("price", this.state.price);
         values.set("currency", this.state.currency);
 
-        const { listId, itemId, listName } = this.props;
+        const { listId, itemId } = this.props;
 
         instance.put(`/shoppinglists/${listId}/shoppingitems/${itemId}`, values).then(
             response => {
@@ -56,7 +55,7 @@ class UpdateItemForm extends Component {
                     showModal6: false 
                 })
                 this.props.getAllShoppingItems(listId);
-                toastr.success("You have successfully created a shopping item!");
+                toastr.success("You have successfully updated a shopping item!");
             }
         ).catch(error => {
             toastr.error(error.response.data.message)
@@ -64,7 +63,6 @@ class UpdateItemForm extends Component {
     }
   
     render() {
-        console.log(this.props)
       return (
             <div>
                 <button 

@@ -1,0 +1,465 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`interface of SignInForm component should render 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SignInForm />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <FormGroup
+          bsClass="form-group"
+          controlId="email"
+        >
+          <ControlLabel
+            bsClass="control-label"
+            srOnly={false}
+          >
+            Email
+          </ControlLabel>
+          <FormControl
+            bsClass="form-control"
+            componentClass="input"
+            name="email"
+            onChange={undefined}
+            placeholder="Enter email"
+            required={true}
+            type="email"
+            value={undefined}
+          />
+        </FormGroup>,
+        <FormGroup
+          bsClass="form-group"
+          controlId="password"
+        >
+          <ControlLabel
+            bsClass="control-label"
+            srOnly={false}
+          >
+            Password
+          </ControlLabel>
+          <FormControl
+            bsClass="form-control"
+            componentClass="input"
+            name="password"
+            onChange={undefined}
+            required={true}
+            type="password"
+            value={undefined}
+          />
+        </FormGroup>,
+        <Button
+          active={false}
+          block={false}
+          bsClass="btn"
+          bsStyle="default"
+          disabled={false}
+          type="submit"
+        >
+          Submit
+        </Button>,
+        <FormControlFeedback
+          bsClass="form-control-feedback"
+          bsRole="feedback"
+        />,
+      ],
+      "onSubmit": undefined,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "bsClass": "form-group",
+          "children": Array [
+            <ControlLabel
+              bsClass="control-label"
+              srOnly={false}
+            >
+              Email
+            </ControlLabel>,
+            <FormControl
+              bsClass="form-control"
+              componentClass="input"
+              name="email"
+              onChange={undefined}
+              placeholder="Enter email"
+              required={true}
+              type="email"
+              value={undefined}
+            />,
+          ],
+          "controlId": "email",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "bsClass": "control-label",
+              "children": "Email",
+              "srOnly": false,
+            },
+            "ref": null,
+            "rendered": "Email",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "bsClass": "form-control",
+              "componentClass": "input",
+              "name": "email",
+              "onChange": undefined,
+              "placeholder": "Enter email",
+              "required": true,
+              "type": "email",
+              "value": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "bsClass": "form-group",
+          "children": Array [
+            <ControlLabel
+              bsClass="control-label"
+              srOnly={false}
+            >
+              Password
+            </ControlLabel>,
+            <FormControl
+              bsClass="form-control"
+              componentClass="input"
+              name="password"
+              onChange={undefined}
+              required={true}
+              type="password"
+              value={undefined}
+            />,
+          ],
+          "controlId": "password",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "bsClass": "control-label",
+              "children": "Password",
+              "srOnly": false,
+            },
+            "ref": null,
+            "rendered": "Password",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "bsClass": "form-control",
+              "componentClass": "input",
+              "name": "password",
+              "onChange": undefined,
+              "required": true,
+              "type": "password",
+              "value": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "active": false,
+          "block": false,
+          "bsClass": "btn",
+          "bsStyle": "default",
+          "children": "Submit",
+          "disabled": false,
+          "type": "submit",
+        },
+        "ref": null,
+        "rendered": "Submit",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "bsClass": "form-control-feedback",
+          "bsRole": "feedback",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <FormGroup
+            bsClass="form-group"
+            controlId="email"
+          >
+            <ControlLabel
+              bsClass="control-label"
+              srOnly={false}
+            >
+              Email
+            </ControlLabel>
+            <FormControl
+              bsClass="form-control"
+              componentClass="input"
+              name="email"
+              onChange={undefined}
+              placeholder="Enter email"
+              required={true}
+              type="email"
+              value={undefined}
+            />
+          </FormGroup>,
+          <FormGroup
+            bsClass="form-group"
+            controlId="password"
+          >
+            <ControlLabel
+              bsClass="control-label"
+              srOnly={false}
+            >
+              Password
+            </ControlLabel>
+            <FormControl
+              bsClass="form-control"
+              componentClass="input"
+              name="password"
+              onChange={undefined}
+              required={true}
+              type="password"
+              value={undefined}
+            />
+          </FormGroup>,
+          <Button
+            active={false}
+            block={false}
+            bsClass="btn"
+            bsStyle="default"
+            disabled={false}
+            type="submit"
+          >
+            Submit
+          </Button>,
+          <FormControlFeedback
+            bsClass="form-control-feedback"
+            bsRole="feedback"
+          />,
+        ],
+        "onSubmit": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "bsClass": "form-group",
+            "children": Array [
+              <ControlLabel
+                bsClass="control-label"
+                srOnly={false}
+              >
+                Email
+              </ControlLabel>,
+              <FormControl
+                bsClass="form-control"
+                componentClass="input"
+                name="email"
+                onChange={undefined}
+                placeholder="Enter email"
+                required={true}
+                type="email"
+                value={undefined}
+              />,
+            ],
+            "controlId": "email",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "bsClass": "control-label",
+                "children": "Email",
+                "srOnly": false,
+              },
+              "ref": null,
+              "rendered": "Email",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "bsClass": "form-control",
+                "componentClass": "input",
+                "name": "email",
+                "onChange": undefined,
+                "placeholder": "Enter email",
+                "required": true,
+                "type": "email",
+                "value": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "bsClass": "form-group",
+            "children": Array [
+              <ControlLabel
+                bsClass="control-label"
+                srOnly={false}
+              >
+                Password
+              </ControlLabel>,
+              <FormControl
+                bsClass="form-control"
+                componentClass="input"
+                name="password"
+                onChange={undefined}
+                required={true}
+                type="password"
+                value={undefined}
+              />,
+            ],
+            "controlId": "password",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "bsClass": "control-label",
+                "children": "Password",
+                "srOnly": false,
+              },
+              "ref": null,
+              "rendered": "Password",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "bsClass": "form-control",
+                "componentClass": "input",
+                "name": "password",
+                "onChange": undefined,
+                "required": true,
+                "type": "password",
+                "value": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "active": false,
+            "block": false,
+            "bsClass": "btn",
+            "bsStyle": "default",
+            "children": "Submit",
+            "disabled": false,
+            "type": "submit",
+          },
+          "ref": null,
+          "rendered": "Submit",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "bsClass": "form-control-feedback",
+            "bsRole": "feedback",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

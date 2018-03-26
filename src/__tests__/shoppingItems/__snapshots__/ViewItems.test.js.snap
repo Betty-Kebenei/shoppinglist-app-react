@@ -1,0 +1,613 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`interface of ViewItems component should render 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ViewItems />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2>
+          Shopping items for: 
+        </h2>,
+        <br />,
+        <div
+          className="col-sm-12"
+        >
+          <table
+            className="table bordered"
+          >
+            <thead>
+              <tr>
+                <td>
+                  ITEMNAME
+                </td>
+                <td>
+                  QUANTITY
+                </td>
+                <td>
+                  UNITS
+                </td>
+                <td>
+                  PRICE
+                </td>
+                <td>
+                  CURRENCY
+                </td>
+                <td>
+                  ACTIONS
+                </td>
+              </tr>
+            </thead>
+            <tbody />
+          </table>
+        </div>,
+      ],
+      "className": "View col-sm-12",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Shopping items for: ",
+            undefined,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Shopping items for: ",
+          undefined,
+        ],
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <table
+              className="table bordered"
+            >
+              <thead>
+                <tr>
+                  <td>
+                    ITEMNAME
+                  </td>
+                  <td>
+                    QUANTITY
+                  </td>
+                  <td>
+                    UNITS
+                  </td>
+                  <td>
+                    PRICE
+                  </td>
+                  <td>
+                    CURRENCY
+                  </td>
+                  <td>
+                    ACTIONS
+                  </td>
+                </tr>
+              </thead>
+              <tbody />
+            </table>,
+            undefined,
+            undefined,
+          ],
+          "className": "col-sm-12",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <thead>
+                  <tr>
+                    <td>
+                      ITEMNAME
+                    </td>
+                    <td>
+                      QUANTITY
+                    </td>
+                    <td>
+                      UNITS
+                    </td>
+                    <td>
+                      PRICE
+                    </td>
+                    <td>
+                      CURRENCY
+                    </td>
+                    <td>
+                      ACTIONS
+                    </td>
+                  </tr>
+                </thead>,
+                <tbody />,
+              ],
+              "className": "table bordered",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <tr>
+                    <td>
+                      ITEMNAME
+                    </td>
+                    <td>
+                      QUANTITY
+                    </td>
+                    <td>
+                      UNITS
+                    </td>
+                    <td>
+                      PRICE
+                    </td>
+                    <td>
+                      CURRENCY
+                    </td>
+                    <td>
+                      ACTIONS
+                    </td>
+                  </tr>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <td>
+                        ITEMNAME
+                      </td>,
+                      <td>
+                        QUANTITY
+                      </td>,
+                      <td>
+                        UNITS
+                      </td>,
+                      <td>
+                        PRICE
+                      </td>,
+                      <td>
+                        CURRENCY
+                      </td>,
+                      <td>
+                        ACTIONS
+                      </td>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "ITEMNAME",
+                      },
+                      "ref": null,
+                      "rendered": "ITEMNAME",
+                      "type": "td",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "QUANTITY",
+                      },
+                      "ref": null,
+                      "rendered": "QUANTITY",
+                      "type": "td",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "UNITS",
+                      },
+                      "ref": null,
+                      "rendered": "UNITS",
+                      "type": "td",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "PRICE",
+                      },
+                      "ref": null,
+                      "rendered": "PRICE",
+                      "type": "td",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "CURRENCY",
+                      },
+                      "ref": null,
+                      "rendered": "CURRENCY",
+                      "type": "td",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "ACTIONS",
+                      },
+                      "ref": null,
+                      "rendered": "ACTIONS",
+                      "type": "td",
+                    },
+                  ],
+                  "type": "tr",
+                },
+                "type": "thead",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [],
+                },
+                "ref": null,
+                "rendered": Array [],
+                "type": "tbody",
+              },
+            ],
+            "type": "table",
+          },
+          undefined,
+          undefined,
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Shopping items for: 
+          </h2>,
+          <br />,
+          <div
+            className="col-sm-12"
+          >
+            <table
+              className="table bordered"
+            >
+              <thead>
+                <tr>
+                  <td>
+                    ITEMNAME
+                  </td>
+                  <td>
+                    QUANTITY
+                  </td>
+                  <td>
+                    UNITS
+                  </td>
+                  <td>
+                    PRICE
+                  </td>
+                  <td>
+                    CURRENCY
+                  </td>
+                  <td>
+                    ACTIONS
+                  </td>
+                </tr>
+              </thead>
+              <tbody />
+            </table>
+          </div>,
+        ],
+        "className": "View col-sm-12",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Shopping items for: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Shopping items for: ",
+            undefined,
+          ],
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <table
+                className="table bordered"
+              >
+                <thead>
+                  <tr>
+                    <td>
+                      ITEMNAME
+                    </td>
+                    <td>
+                      QUANTITY
+                    </td>
+                    <td>
+                      UNITS
+                    </td>
+                    <td>
+                      PRICE
+                    </td>
+                    <td>
+                      CURRENCY
+                    </td>
+                    <td>
+                      ACTIONS
+                    </td>
+                  </tr>
+                </thead>
+                <tbody />
+              </table>,
+              undefined,
+              undefined,
+            ],
+            "className": "col-sm-12",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <thead>
+                    <tr>
+                      <td>
+                        ITEMNAME
+                      </td>
+                      <td>
+                        QUANTITY
+                      </td>
+                      <td>
+                        UNITS
+                      </td>
+                      <td>
+                        PRICE
+                      </td>
+                      <td>
+                        CURRENCY
+                      </td>
+                      <td>
+                        ACTIONS
+                      </td>
+                    </tr>
+                  </thead>,
+                  <tbody />,
+                ],
+                "className": "table bordered",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <tr>
+                      <td>
+                        ITEMNAME
+                      </td>
+                      <td>
+                        QUANTITY
+                      </td>
+                      <td>
+                        UNITS
+                      </td>
+                      <td>
+                        PRICE
+                      </td>
+                      <td>
+                        CURRENCY
+                      </td>
+                      <td>
+                        ACTIONS
+                      </td>
+                    </tr>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <td>
+                          ITEMNAME
+                        </td>,
+                        <td>
+                          QUANTITY
+                        </td>,
+                        <td>
+                          UNITS
+                        </td>,
+                        <td>
+                          PRICE
+                        </td>,
+                        <td>
+                          CURRENCY
+                        </td>,
+                        <td>
+                          ACTIONS
+                        </td>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "ITEMNAME",
+                        },
+                        "ref": null,
+                        "rendered": "ITEMNAME",
+                        "type": "td",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "QUANTITY",
+                        },
+                        "ref": null,
+                        "rendered": "QUANTITY",
+                        "type": "td",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "UNITS",
+                        },
+                        "ref": null,
+                        "rendered": "UNITS",
+                        "type": "td",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "PRICE",
+                        },
+                        "ref": null,
+                        "rendered": "PRICE",
+                        "type": "td",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "CURRENCY",
+                        },
+                        "ref": null,
+                        "rendered": "CURRENCY",
+                        "type": "td",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "ACTIONS",
+                        },
+                        "ref": null,
+                        "rendered": "ACTIONS",
+                        "type": "td",
+                      },
+                    ],
+                    "type": "tr",
+                  },
+                  "type": "thead",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [],
+                  },
+                  "ref": null,
+                  "rendered": Array [],
+                  "type": "tbody",
+                },
+              ],
+              "type": "table",
+            },
+            undefined,
+            undefined,
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

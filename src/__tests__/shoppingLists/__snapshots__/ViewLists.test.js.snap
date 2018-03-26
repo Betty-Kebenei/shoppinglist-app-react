@@ -1,0 +1,425 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`interface of ViewLists component should render 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ViewLists />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2>
+          Shopping Lists:
+        </h2>,
+        <div
+          className="col-sm-12"
+        >
+          <table
+            className="table bordered"
+          >
+            <thead>
+              <tr>
+                <td>
+                  LIST ID
+                </td>
+                <td>
+                  LISTNAME
+                </td>
+                <td>
+                  ACTIONS
+                </td>
+              </tr>
+            </thead>
+            <tbody />
+          </table>
+        </div>,
+      ],
+      "className": "View",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Shopping Lists:",
+        },
+        "ref": null,
+        "rendered": "Shopping Lists:",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <table
+              className="table bordered"
+            >
+              <thead>
+                <tr>
+                  <td>
+                    LIST ID
+                  </td>
+                  <td>
+                    LISTNAME
+                  </td>
+                  <td>
+                    ACTIONS
+                  </td>
+                </tr>
+              </thead>
+              <tbody />
+            </table>,
+            undefined,
+            undefined,
+          ],
+          "className": "col-sm-12",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <thead>
+                  <tr>
+                    <td>
+                      LIST ID
+                    </td>
+                    <td>
+                      LISTNAME
+                    </td>
+                    <td>
+                      ACTIONS
+                    </td>
+                  </tr>
+                </thead>,
+                <tbody />,
+              ],
+              "className": "table bordered",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <tr>
+                    <td>
+                      LIST ID
+                    </td>
+                    <td>
+                      LISTNAME
+                    </td>
+                    <td>
+                      ACTIONS
+                    </td>
+                  </tr>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <td>
+                        LIST ID
+                      </td>,
+                      <td>
+                        LISTNAME
+                      </td>,
+                      <td>
+                        ACTIONS
+                      </td>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "LIST ID",
+                      },
+                      "ref": null,
+                      "rendered": "LIST ID",
+                      "type": "td",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "LISTNAME",
+                      },
+                      "ref": null,
+                      "rendered": "LISTNAME",
+                      "type": "td",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "ACTIONS",
+                      },
+                      "ref": null,
+                      "rendered": "ACTIONS",
+                      "type": "td",
+                    },
+                  ],
+                  "type": "tr",
+                },
+                "type": "thead",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [],
+                },
+                "ref": null,
+                "rendered": Array [],
+                "type": "tbody",
+              },
+            ],
+            "type": "table",
+          },
+          undefined,
+          undefined,
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Shopping Lists:
+          </h2>,
+          <div
+            className="col-sm-12"
+          >
+            <table
+              className="table bordered"
+            >
+              <thead>
+                <tr>
+                  <td>
+                    LIST ID
+                  </td>
+                  <td>
+                    LISTNAME
+                  </td>
+                  <td>
+                    ACTIONS
+                  </td>
+                </tr>
+              </thead>
+              <tbody />
+            </table>
+          </div>,
+        ],
+        "className": "View",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Shopping Lists:",
+          },
+          "ref": null,
+          "rendered": "Shopping Lists:",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <table
+                className="table bordered"
+              >
+                <thead>
+                  <tr>
+                    <td>
+                      LIST ID
+                    </td>
+                    <td>
+                      LISTNAME
+                    </td>
+                    <td>
+                      ACTIONS
+                    </td>
+                  </tr>
+                </thead>
+                <tbody />
+              </table>,
+              undefined,
+              undefined,
+            ],
+            "className": "col-sm-12",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <thead>
+                    <tr>
+                      <td>
+                        LIST ID
+                      </td>
+                      <td>
+                        LISTNAME
+                      </td>
+                      <td>
+                        ACTIONS
+                      </td>
+                    </tr>
+                  </thead>,
+                  <tbody />,
+                ],
+                "className": "table bordered",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <tr>
+                      <td>
+                        LIST ID
+                      </td>
+                      <td>
+                        LISTNAME
+                      </td>
+                      <td>
+                        ACTIONS
+                      </td>
+                    </tr>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <td>
+                          LIST ID
+                        </td>,
+                        <td>
+                          LISTNAME
+                        </td>,
+                        <td>
+                          ACTIONS
+                        </td>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "LIST ID",
+                        },
+                        "ref": null,
+                        "rendered": "LIST ID",
+                        "type": "td",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "LISTNAME",
+                        },
+                        "ref": null,
+                        "rendered": "LISTNAME",
+                        "type": "td",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "ACTIONS",
+                        },
+                        "ref": null,
+                        "rendered": "ACTIONS",
+                        "type": "td",
+                      },
+                    ],
+                    "type": "tr",
+                  },
+                  "type": "thead",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [],
+                  },
+                  "ref": null,
+                  "rendered": Array [],
+                  "type": "tbody",
+                },
+              ],
+              "type": "table",
+            },
+            undefined,
+            undefined,
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

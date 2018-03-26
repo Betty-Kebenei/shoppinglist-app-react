@@ -1,0 +1,1261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`interface of ListsContainer component should render 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ListsContainer />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="row"
+        >
+          <div
+            className="col-xs-2"
+          >
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="default"
+              disabled={false}
+              onClick={[Function]}
+            >
+              Add List
+            </Button>
+            <Modal
+              animation={true}
+              autoFocus={true}
+              backdrop={true}
+              bsClass="modal"
+              dialogComponentClass={[Function]}
+              enforceFocus={true}
+              keyboard={true}
+              manager={
+                ModalManager {
+                  "add": [Function],
+                  "containers": Array [],
+                  "data": Array [],
+                  "handleContainerOverflow": true,
+                  "hideSiblingNodes": true,
+                  "isTopModal": [Function],
+                  "modals": Array [],
+                  "remove": [Function],
+                }
+              }
+              onHide={[Function]}
+              renderBackdrop={[Function]}
+              restoreFocus={true}
+              show={false}
+            >
+              <ModalHeader
+                bsClass="modal-header"
+                closeButton={true}
+                closeLabel="Close"
+              >
+                <ModalTitle
+                  bsClass="modal-title"
+                  componentClass="h4"
+                >
+                  Shopping List Form
+                </ModalTitle>
+              </ModalHeader>
+              <ModalBody
+                bsClass="modal-body"
+                componentClass="div"
+              >
+                <AddListForm
+                  listName={undefined}
+                  onChange={[Function]}
+                  onSubmit={[Function]}
+                />
+              </ModalBody>
+              <ModalFooter
+                bsClass="modal-footer"
+                componentClass="div"
+              >
+                <Button
+                  active={false}
+                  block={false}
+                  bsClass="btn"
+                  bsStyle="default"
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Close
+                </Button>
+              </ModalFooter>
+            </Modal>
+          </div>
+          <div
+            className="col-xs-2"
+          >
+            <Button
+              active={false}
+              block={false}
+              bsClass="btn"
+              bsStyle="default"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+            >
+              Delete Lists
+            </Button>
+          </div>
+          <div
+            className="col-xs-8"
+          >
+            <input
+              onChange={[Function]}
+              placeholder="search lists"
+              value=""
+            />
+          </div>
+        </div>,
+        <ViewLists
+          allShoppingLists={Array []}
+          deleteOneShoppingList={[Function]}
+          getAllShoppingLists={[Function]}
+          getErrorMessage=""
+          props={Object {}}
+          searchErrorMessage=""
+          updateShoppingList={undefined}
+        />,
+        <PaginateLists
+          count={0}
+          limit={5}
+          onPaginateLists={[Function]}
+        />,
+      ],
+      "className": "ViewContainer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="col-xs-2"
+            >
+              <Button
+                active={false}
+                block={false}
+                bsClass="btn"
+                bsStyle="default"
+                disabled={false}
+                onClick={[Function]}
+              >
+                Add List
+              </Button>
+              <Modal
+                animation={true}
+                autoFocus={true}
+                backdrop={true}
+                bsClass="modal"
+                dialogComponentClass={[Function]}
+                enforceFocus={true}
+                keyboard={true}
+                manager={
+                  ModalManager {
+                    "add": [Function],
+                    "containers": Array [],
+                    "data": Array [],
+                    "handleContainerOverflow": true,
+                    "hideSiblingNodes": true,
+                    "isTopModal": [Function],
+                    "modals": Array [],
+                    "remove": [Function],
+                  }
+                }
+                onHide={[Function]}
+                renderBackdrop={[Function]}
+                restoreFocus={true}
+                show={false}
+              >
+                <ModalHeader
+                  bsClass="modal-header"
+                  closeButton={true}
+                  closeLabel="Close"
+                >
+                  <ModalTitle
+                    bsClass="modal-title"
+                    componentClass="h4"
+                  >
+                    Shopping List Form
+                  </ModalTitle>
+                </ModalHeader>
+                <ModalBody
+                  bsClass="modal-body"
+                  componentClass="div"
+                >
+                  <AddListForm
+                    listName={undefined}
+                    onChange={[Function]}
+                    onSubmit={[Function]}
+                  />
+                </ModalBody>
+                <ModalFooter
+                  bsClass="modal-footer"
+                  componentClass="div"
+                >
+                  <Button
+                    active={false}
+                    block={false}
+                    bsClass="btn"
+                    bsStyle="default"
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    Close
+                  </Button>
+                </ModalFooter>
+              </Modal>
+            </div>,
+            <div
+              className="col-xs-2"
+            >
+              <Button
+                active={false}
+                block={false}
+                bsClass="btn"
+                bsStyle="default"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                Delete Lists
+              </Button>
+            </div>,
+            <div
+              className="col-xs-8"
+            >
+              <input
+                onChange={[Function]}
+                placeholder="search lists"
+                value=""
+              />
+            </div>,
+          ],
+          "className": "row",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Button
+                  active={false}
+                  block={false}
+                  bsClass="btn"
+                  bsStyle="default"
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Add List
+                </Button>,
+                <Modal
+                  animation={true}
+                  autoFocus={true}
+                  backdrop={true}
+                  bsClass="modal"
+                  dialogComponentClass={[Function]}
+                  enforceFocus={true}
+                  keyboard={true}
+                  manager={
+                    ModalManager {
+                      "add": [Function],
+                      "containers": Array [],
+                      "data": Array [],
+                      "handleContainerOverflow": true,
+                      "hideSiblingNodes": true,
+                      "isTopModal": [Function],
+                      "modals": Array [],
+                      "remove": [Function],
+                    }
+                  }
+                  onHide={[Function]}
+                  renderBackdrop={[Function]}
+                  restoreFocus={true}
+                  show={false}
+                >
+                  <ModalHeader
+                    bsClass="modal-header"
+                    closeButton={true}
+                    closeLabel="Close"
+                  >
+                    <ModalTitle
+                      bsClass="modal-title"
+                      componentClass="h4"
+                    >
+                      Shopping List Form
+                    </ModalTitle>
+                  </ModalHeader>
+                  <ModalBody
+                    bsClass="modal-body"
+                    componentClass="div"
+                  >
+                    <AddListForm
+                      listName={undefined}
+                      onChange={[Function]}
+                      onSubmit={[Function]}
+                    />
+                  </ModalBody>
+                  <ModalFooter
+                    bsClass="modal-footer"
+                    componentClass="div"
+                  >
+                    <Button
+                      active={false}
+                      block={false}
+                      bsClass="btn"
+                      bsStyle="default"
+                      disabled={false}
+                      onClick={[Function]}
+                    >
+                      Close
+                    </Button>
+                  </ModalFooter>
+                </Modal>,
+              ],
+              "className": "col-xs-2",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "active": false,
+                  "block": false,
+                  "bsClass": "btn",
+                  "bsStyle": "default",
+                  "children": "Add List",
+                  "disabled": false,
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Add List",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "animation": true,
+                  "autoFocus": true,
+                  "backdrop": true,
+                  "bsClass": "modal",
+                  "children": Array [
+                    <ModalHeader
+                      bsClass="modal-header"
+                      closeButton={true}
+                      closeLabel="Close"
+                    >
+                      <ModalTitle
+                        bsClass="modal-title"
+                        componentClass="h4"
+                      >
+                        Shopping List Form
+                      </ModalTitle>
+                    </ModalHeader>,
+                    <ModalBody
+                      bsClass="modal-body"
+                      componentClass="div"
+                    >
+                      <AddListForm
+                        listName={undefined}
+                        onChange={[Function]}
+                        onSubmit={[Function]}
+                      />
+                    </ModalBody>,
+                    <ModalFooter
+                      bsClass="modal-footer"
+                      componentClass="div"
+                    >
+                      <Button
+                        active={false}
+                        block={false}
+                        bsClass="btn"
+                        bsStyle="default"
+                        disabled={false}
+                        onClick={[Function]}
+                      >
+                        Close
+                      </Button>
+                    </ModalFooter>,
+                  ],
+                  "dialogComponentClass": [Function],
+                  "enforceFocus": true,
+                  "keyboard": true,
+                  "manager": ModalManager {
+                    "add": [Function],
+                    "containers": Array [],
+                    "data": Array [],
+                    "handleContainerOverflow": true,
+                    "hideSiblingNodes": true,
+                    "isTopModal": [Function],
+                    "modals": Array [],
+                    "remove": [Function],
+                  },
+                  "onHide": [Function],
+                  "renderBackdrop": [Function],
+                  "restoreFocus": true,
+                  "show": false,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "bsClass": "modal-header",
+                      "children": <ModalTitle
+                        bsClass="modal-title"
+                        componentClass="h4"
+                      >
+                        Shopping List Form
+                      </ModalTitle>,
+                      "closeButton": true,
+                      "closeLabel": "Close",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "bsClass": "modal-title",
+                        "children": "Shopping List Form",
+                        "componentClass": "h4",
+                      },
+                      "ref": null,
+                      "rendered": "Shopping List Form",
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "bsClass": "modal-body",
+                      "children": <AddListForm
+                        listName={undefined}
+                        onChange={[Function]}
+                        onSubmit={[Function]}
+                      />,
+                      "componentClass": "div",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "listName": undefined,
+                        "onChange": [Function],
+                        "onSubmit": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "bsClass": "modal-footer",
+                      "children": <Button
+                        active={false}
+                        block={false}
+                        bsClass="btn"
+                        bsStyle="default"
+                        disabled={false}
+                        onClick={[Function]}
+                      >
+                        Close
+                      </Button>,
+                      "componentClass": "div",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "active": false,
+                        "block": false,
+                        "bsClass": "btn",
+                        "bsStyle": "default",
+                        "children": "Close",
+                        "disabled": false,
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "Close",
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Button
+                active={false}
+                block={false}
+                bsClass="btn"
+                bsStyle="default"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                Delete Lists
+              </Button>,
+              "className": "col-xs-2",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "active": false,
+                "block": false,
+                "bsClass": "btn",
+                "bsStyle": "default",
+                "children": "Delete Lists",
+                "disabled": false,
+                "onClick": [Function],
+                "type": "button",
+              },
+              "ref": null,
+              "rendered": "Delete Lists",
+              "type": [Function],
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <input
+                onChange={[Function]}
+                placeholder="search lists"
+                value=""
+              />,
+              "className": "col-xs-8",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "onChange": [Function],
+                "placeholder": "search lists",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "allShoppingLists": Array [],
+          "deleteOneShoppingList": [Function],
+          "getAllShoppingLists": [Function],
+          "getErrorMessage": "",
+          "props": Object {},
+          "searchErrorMessage": "",
+          "updateShoppingList": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "count": 0,
+          "limit": 5,
+          "onPaginateLists": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="row"
+          >
+            <div
+              className="col-xs-2"
+            >
+              <Button
+                active={false}
+                block={false}
+                bsClass="btn"
+                bsStyle="default"
+                disabled={false}
+                onClick={[Function]}
+              >
+                Add List
+              </Button>
+              <Modal
+                animation={true}
+                autoFocus={true}
+                backdrop={true}
+                bsClass="modal"
+                dialogComponentClass={[Function]}
+                enforceFocus={true}
+                keyboard={true}
+                manager={
+                  ModalManager {
+                    "add": [Function],
+                    "containers": Array [],
+                    "data": Array [],
+                    "handleContainerOverflow": true,
+                    "hideSiblingNodes": true,
+                    "isTopModal": [Function],
+                    "modals": Array [],
+                    "remove": [Function],
+                  }
+                }
+                onHide={[Function]}
+                renderBackdrop={[Function]}
+                restoreFocus={true}
+                show={false}
+              >
+                <ModalHeader
+                  bsClass="modal-header"
+                  closeButton={true}
+                  closeLabel="Close"
+                >
+                  <ModalTitle
+                    bsClass="modal-title"
+                    componentClass="h4"
+                  >
+                    Shopping List Form
+                  </ModalTitle>
+                </ModalHeader>
+                <ModalBody
+                  bsClass="modal-body"
+                  componentClass="div"
+                >
+                  <AddListForm
+                    listName={undefined}
+                    onChange={[Function]}
+                    onSubmit={[Function]}
+                  />
+                </ModalBody>
+                <ModalFooter
+                  bsClass="modal-footer"
+                  componentClass="div"
+                >
+                  <Button
+                    active={false}
+                    block={false}
+                    bsClass="btn"
+                    bsStyle="default"
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    Close
+                  </Button>
+                </ModalFooter>
+              </Modal>
+            </div>
+            <div
+              className="col-xs-2"
+            >
+              <Button
+                active={false}
+                block={false}
+                bsClass="btn"
+                bsStyle="default"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                Delete Lists
+              </Button>
+            </div>
+            <div
+              className="col-xs-8"
+            >
+              <input
+                onChange={[Function]}
+                placeholder="search lists"
+                value=""
+              />
+            </div>
+          </div>,
+          <ViewLists
+            allShoppingLists={Array []}
+            deleteOneShoppingList={[Function]}
+            getAllShoppingLists={[Function]}
+            getErrorMessage=""
+            props={Object {}}
+            searchErrorMessage=""
+            updateShoppingList={undefined}
+          />,
+          <PaginateLists
+            count={0}
+            limit={5}
+            onPaginateLists={[Function]}
+          />,
+        ],
+        "className": "ViewContainer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="col-xs-2"
+              >
+                <Button
+                  active={false}
+                  block={false}
+                  bsClass="btn"
+                  bsStyle="default"
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Add List
+                </Button>
+                <Modal
+                  animation={true}
+                  autoFocus={true}
+                  backdrop={true}
+                  bsClass="modal"
+                  dialogComponentClass={[Function]}
+                  enforceFocus={true}
+                  keyboard={true}
+                  manager={
+                    ModalManager {
+                      "add": [Function],
+                      "containers": Array [],
+                      "data": Array [],
+                      "handleContainerOverflow": true,
+                      "hideSiblingNodes": true,
+                      "isTopModal": [Function],
+                      "modals": Array [],
+                      "remove": [Function],
+                    }
+                  }
+                  onHide={[Function]}
+                  renderBackdrop={[Function]}
+                  restoreFocus={true}
+                  show={false}
+                >
+                  <ModalHeader
+                    bsClass="modal-header"
+                    closeButton={true}
+                    closeLabel="Close"
+                  >
+                    <ModalTitle
+                      bsClass="modal-title"
+                      componentClass="h4"
+                    >
+                      Shopping List Form
+                    </ModalTitle>
+                  </ModalHeader>
+                  <ModalBody
+                    bsClass="modal-body"
+                    componentClass="div"
+                  >
+                    <AddListForm
+                      listName={undefined}
+                      onChange={[Function]}
+                      onSubmit={[Function]}
+                    />
+                  </ModalBody>
+                  <ModalFooter
+                    bsClass="modal-footer"
+                    componentClass="div"
+                  >
+                    <Button
+                      active={false}
+                      block={false}
+                      bsClass="btn"
+                      bsStyle="default"
+                      disabled={false}
+                      onClick={[Function]}
+                    >
+                      Close
+                    </Button>
+                  </ModalFooter>
+                </Modal>
+              </div>,
+              <div
+                className="col-xs-2"
+              >
+                <Button
+                  active={false}
+                  block={false}
+                  bsClass="btn"
+                  bsStyle="default"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Delete Lists
+                </Button>
+              </div>,
+              <div
+                className="col-xs-8"
+              >
+                <input
+                  onChange={[Function]}
+                  placeholder="search lists"
+                  value=""
+                />
+              </div>,
+            ],
+            "className": "row",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <Button
+                    active={false}
+                    block={false}
+                    bsClass="btn"
+                    bsStyle="default"
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    Add List
+                  </Button>,
+                  <Modal
+                    animation={true}
+                    autoFocus={true}
+                    backdrop={true}
+                    bsClass="modal"
+                    dialogComponentClass={[Function]}
+                    enforceFocus={true}
+                    keyboard={true}
+                    manager={
+                      ModalManager {
+                        "add": [Function],
+                        "containers": Array [],
+                        "data": Array [],
+                        "handleContainerOverflow": true,
+                        "hideSiblingNodes": true,
+                        "isTopModal": [Function],
+                        "modals": Array [],
+                        "remove": [Function],
+                      }
+                    }
+                    onHide={[Function]}
+                    renderBackdrop={[Function]}
+                    restoreFocus={true}
+                    show={false}
+                  >
+                    <ModalHeader
+                      bsClass="modal-header"
+                      closeButton={true}
+                      closeLabel="Close"
+                    >
+                      <ModalTitle
+                        bsClass="modal-title"
+                        componentClass="h4"
+                      >
+                        Shopping List Form
+                      </ModalTitle>
+                    </ModalHeader>
+                    <ModalBody
+                      bsClass="modal-body"
+                      componentClass="div"
+                    >
+                      <AddListForm
+                        listName={undefined}
+                        onChange={[Function]}
+                        onSubmit={[Function]}
+                      />
+                    </ModalBody>
+                    <ModalFooter
+                      bsClass="modal-footer"
+                      componentClass="div"
+                    >
+                      <Button
+                        active={false}
+                        block={false}
+                        bsClass="btn"
+                        bsStyle="default"
+                        disabled={false}
+                        onClick={[Function]}
+                      >
+                        Close
+                      </Button>
+                    </ModalFooter>
+                  </Modal>,
+                ],
+                "className": "col-xs-2",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "active": false,
+                    "block": false,
+                    "bsClass": "btn",
+                    "bsStyle": "default",
+                    "children": "Add List",
+                    "disabled": false,
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Add List",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "animation": true,
+                    "autoFocus": true,
+                    "backdrop": true,
+                    "bsClass": "modal",
+                    "children": Array [
+                      <ModalHeader
+                        bsClass="modal-header"
+                        closeButton={true}
+                        closeLabel="Close"
+                      >
+                        <ModalTitle
+                          bsClass="modal-title"
+                          componentClass="h4"
+                        >
+                          Shopping List Form
+                        </ModalTitle>
+                      </ModalHeader>,
+                      <ModalBody
+                        bsClass="modal-body"
+                        componentClass="div"
+                      >
+                        <AddListForm
+                          listName={undefined}
+                          onChange={[Function]}
+                          onSubmit={[Function]}
+                        />
+                      </ModalBody>,
+                      <ModalFooter
+                        bsClass="modal-footer"
+                        componentClass="div"
+                      >
+                        <Button
+                          active={false}
+                          block={false}
+                          bsClass="btn"
+                          bsStyle="default"
+                          disabled={false}
+                          onClick={[Function]}
+                        >
+                          Close
+                        </Button>
+                      </ModalFooter>,
+                    ],
+                    "dialogComponentClass": [Function],
+                    "enforceFocus": true,
+                    "keyboard": true,
+                    "manager": ModalManager {
+                      "add": [Function],
+                      "containers": Array [],
+                      "data": Array [],
+                      "handleContainerOverflow": true,
+                      "hideSiblingNodes": true,
+                      "isTopModal": [Function],
+                      "modals": Array [],
+                      "remove": [Function],
+                    },
+                    "onHide": [Function],
+                    "renderBackdrop": [Function],
+                    "restoreFocus": true,
+                    "show": false,
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "bsClass": "modal-header",
+                        "children": <ModalTitle
+                          bsClass="modal-title"
+                          componentClass="h4"
+                        >
+                          Shopping List Form
+                        </ModalTitle>,
+                        "closeButton": true,
+                        "closeLabel": "Close",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "bsClass": "modal-title",
+                          "children": "Shopping List Form",
+                          "componentClass": "h4",
+                        },
+                        "ref": null,
+                        "rendered": "Shopping List Form",
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "bsClass": "modal-body",
+                        "children": <AddListForm
+                          listName={undefined}
+                          onChange={[Function]}
+                          onSubmit={[Function]}
+                        />,
+                        "componentClass": "div",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "listName": undefined,
+                          "onChange": [Function],
+                          "onSubmit": [Function],
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "bsClass": "modal-footer",
+                        "children": <Button
+                          active={false}
+                          block={false}
+                          bsClass="btn"
+                          bsStyle="default"
+                          disabled={false}
+                          onClick={[Function]}
+                        >
+                          Close
+                        </Button>,
+                        "componentClass": "div",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "active": false,
+                          "block": false,
+                          "bsClass": "btn",
+                          "bsStyle": "default",
+                          "children": "Close",
+                          "disabled": false,
+                          "onClick": [Function],
+                        },
+                        "ref": null,
+                        "rendered": "Close",
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Button
+                  active={false}
+                  block={false}
+                  bsClass="btn"
+                  bsStyle="default"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Delete Lists
+                </Button>,
+                "className": "col-xs-2",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "active": false,
+                  "block": false,
+                  "bsClass": "btn",
+                  "bsStyle": "default",
+                  "children": "Delete Lists",
+                  "disabled": false,
+                  "onClick": [Function],
+                  "type": "button",
+                },
+                "ref": null,
+                "rendered": "Delete Lists",
+                "type": [Function],
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <input
+                  onChange={[Function]}
+                  placeholder="search lists"
+                  value=""
+                />,
+                "className": "col-xs-8",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "onChange": [Function],
+                  "placeholder": "search lists",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "allShoppingLists": Array [],
+            "deleteOneShoppingList": [Function],
+            "getAllShoppingLists": [Function],
+            "getErrorMessage": "",
+            "props": Object {},
+            "searchErrorMessage": "",
+            "updateShoppingList": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "count": 0,
+            "limit": 5,
+            "onPaginateLists": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
